@@ -56,7 +56,7 @@ This smart contract can be deployed to any EVM based network.
 The smart contract was deployed to sepolia testnet.
 
 ```shell
-$ SimpleERC20Swapper address: 0x0BE7B98d8F587f86F21d5D88886635a8A28CD5c7
+$ SimpleERC20Swapper address: 0xE914787D5Bb28e1CaA85FA7D00b7BE80d8f72F91
 ```
 
 ```shell
