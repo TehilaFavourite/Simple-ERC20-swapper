@@ -1,0 +1,46 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "A simple smart contract ",
+  "main": "index.js",
+  "repository": "https://github.com/",
+  "scripts": {
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "lint:sol": "prettier --loglevel warn --ignore-path .gitignore 'contracts//*.sol' --check && solhint 'contracts//*.sol'",
+    "lint:sol:fix": "prettier --loglevel warn --ignore-path .gitignore 'contracts/**/*.sol' --write"
+  },
+  "keywords": [],
+  "author": "https://",
+  "license": "MIT",
+  "devDependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@nomicfoundation/hardhat-foundry": "^1.1.1",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@openzeppelin/hardhat-upgrades": "^1.27.0",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "chai": "^4.3.7",
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.14.0",
+    "hardhat-deploy": "^0.11.34",
+    "hardhat-gas-reporter": "^1.0.9",
+    "prettier": "^2.8.8",
+    "prettier-plugin-solidity": "^1.1.3",
+    "solidity-coverage": "^0.8.2",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.1"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@openzeppelin/contracts-upgradeable": "^4.9.3",
+    "@pinata/sdk": "^2.1.0",
+    "hardhat-contract-sizer": "^2.10.0"
+  }
+}

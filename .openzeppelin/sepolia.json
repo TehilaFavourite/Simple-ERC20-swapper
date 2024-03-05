@@ -1,0 +1,84 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x86f6365Cb53bD370fa3EAA321C7FC113e395B1D8",
+    "txHash": "0x1ef4931e790d9c8a5f65e5faa86b407309dc2b41eb75dd47b7d4719fbbbd02cb"
+  },
+  "proxies": [
+    {
+      "address": "0x21ab0Eb6588442C9AB40E9C66aB52D182da446D1",
+      "txHash": "0x03ec5ac955da4ae4f5166cfd5fd8c445abf7037b606693194e29c05aba062fd1",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "a85dbbf747cb6d2f03a7c59dc24f2e2d8812481ab476b99af8a8e673eb9cfa56": {
+      "address": "0xd3Ae24D50AFBf2Df8166127cd7de06d6529A995f",
+      "txHash": "0x50819892a5bbdce95a1a1e676f58deefaf388b6bff14623d479527ed3f2b5bee",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "router",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_contract(IUniswapV2Router)835",
+            "contract": "SimpleERC20Swapper",
+            "src": "src\\SimpleERC20Swapper.sol:19"
+          },
+          {
+            "label": "factory",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_contract(IFactory)801",
+            "contract": "SimpleERC20Swapper",
+            "src": "src\\SimpleERC20Swapper.sol:20"
+          }
+        ],
+        "types": {
+          "t_contract(IFactory)801": {
+            "label": "contract IFactory",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IUniswapV2Router)835": {
+            "label": "contract IUniswapV2Router",
+            "numberOfBytes": "20"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
