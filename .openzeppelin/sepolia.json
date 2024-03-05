@@ -1,20 +1,16 @@
 {
   "manifestVersion": "3.2",
-  "admin": {
-    "address": "0xaCdb2034F4FFa433d44080a90B37e254FB254E8D",
-    "txHash": "0xe03ccb930944c385d85e45732d1411c3cd5247c82328d7ef7fe07897e9d042bd"
-  },
   "proxies": [
     {
-      "address": "0x0BE7B98d8F587f86F21d5D88886635a8A28CD5c7",
-      "txHash": "0x6678ad4b440db94f2c00bf99c3832765732f5014210088c10b1be532e57bf7f6",
-      "kind": "transparent"
+      "address": "0xE914787D5Bb28e1CaA85FA7D00b7BE80d8f72F91",
+      "txHash": "0xa6ae67a8fce2c65eb8adf01b1e56ab2843e24a9f54e67350e39ac3dc9328fa1c",
+      "kind": "uups"
     }
   ],
   "impls": {
-    "a85dbbf747cb6d2f03a7c59dc24f2e2d8812481ab476b99af8a8e673eb9cfa56": {
-      "address": "0x9937cD1126d27c8CD4021227c07659a3b4F31329",
-      "txHash": "0xbdb17b711fd5725a5241236d58b3cc489fb334c3e08d1adb4bd44c13d0c977f8",
+    "d34428e5760eb1108dc7fa9da99af034641b57a2fc9e87b9b4dc04eda2953afa": {
+      "address": "0x694e91f24745758aa5Dee37B28E67f7f9089F9F5",
+      "txHash": "0xe098df2ac2f44560ceb3b5c9e7e20e197b7d531a933ddfbe5f0e70ba2cdcaad7",
       "layout": {
         "solcVersion": "0.8.20",
         "storage": [
@@ -22,27 +18,30 @@
             "label": "router",
             "offset": 0,
             "slot": "0",
-            "type": "t_contract(IUniswapV2Router)965",
+            "type": "t_contract(IUniswapV2Router)1849",
             "contract": "SimpleERC20Swapper",
-            "src": "src\\SimpleERC20Swapper.sol:14"
+            "src": "src\\SimpleERC20Swapper.sol:19"
           },
           {
             "label": "factory",
             "offset": 0,
             "slot": "1",
-            "type": "t_contract(IFactory)931",
+            "type": "t_contract(IFactory)1815",
             "contract": "SimpleERC20Swapper",
-            "src": "src\\SimpleERC20Swapper.sol:15"
+            "src": "src\\SimpleERC20Swapper.sol:20"
           }
         ],
         "types": {
-          "t_contract(IFactory)931": {
+          "t_contract(IFactory)1815": {
             "label": "contract IFactory",
             "numberOfBytes": "20"
           },
-          "t_contract(IUniswapV2Router)965": {
+          "t_contract(IUniswapV2Router)1849": {
             "label": "contract IUniswapV2Router",
             "numberOfBytes": "20"
+          },
+          "t_uint256": {
+            "label": "uint256"
           },
           "t_address": {
             "label": "address"
@@ -55,6 +54,14 @@
           }
         },
         "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin\\contracts-upgradeable\\utils\\ReentrancyGuardUpgradeable.sol:40"
+            }
+          ],
           "erc7201:openzeppelin.storage.Ownable": [
             {
               "contract": "OwnableUpgradeable",

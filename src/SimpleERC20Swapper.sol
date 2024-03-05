@@ -3,13 +3,19 @@ pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 import "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol";
 import {IERC20} from "../src/interfaces/IERC20.sol";
 import {IFactory} from "../src/interfaces/IFactory.sol";
 import {IUniswapV2Router} from "../src/interfaces/IUniswapV2Router.sol";
 
-contract SimpleERC20Swapper is Initializable, OwnableUpgradeable {
+contract SimpleERC20Swapper is
+    Initializable,
+    OwnableUpgradeable,
+    ReentrancyGuardUpgradeable,
+    UUPSUpgradeable
+{
     IUniswapV2Router public router;
     IFactory public factory;
 
@@ -45,7 +51,7 @@ contract SimpleERC20Swapper is Initializable, OwnableUpgradeable {
     function swapEtherToToken(
         address _token,
         uint256 _minAmount
-    ) external payable returns (uint256) {
+    ) external payable nonReentrant returns (uint256) {
         require(msg.value > 0, "Invalid amount");
         address weth = router.WETH();
         address pairExist = factory.getPair(weth, _token);
@@ -76,6 +82,10 @@ contract SimpleERC20Swapper is Initializable, OwnableUpgradeable {
         require(token != router.WETH(), "Cannot withdraw WETH");
         IERC20(token).transfer(owner(), amount);
     }
+
+    function _authorizeUpgrade(
+        address newImplementation
+    ) internal override onlyOwner {}
 
     receive() external payable {}
 }
