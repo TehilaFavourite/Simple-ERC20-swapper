@@ -1,20 +1,20 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0x86f6365Cb53bD370fa3EAA321C7FC113e395B1D8",
-    "txHash": "0x1ef4931e790d9c8a5f65e5faa86b407309dc2b41eb75dd47b7d4719fbbbd02cb"
+    "address": "0xaCdb2034F4FFa433d44080a90B37e254FB254E8D",
+    "txHash": "0xe03ccb930944c385d85e45732d1411c3cd5247c82328d7ef7fe07897e9d042bd"
   },
   "proxies": [
     {
-      "address": "0x21ab0Eb6588442C9AB40E9C66aB52D182da446D1",
-      "txHash": "0x03ec5ac955da4ae4f5166cfd5fd8c445abf7037b606693194e29c05aba062fd1",
+      "address": "0x0BE7B98d8F587f86F21d5D88886635a8A28CD5c7",
+      "txHash": "0x6678ad4b440db94f2c00bf99c3832765732f5014210088c10b1be532e57bf7f6",
       "kind": "transparent"
     }
   ],
   "impls": {
     "a85dbbf747cb6d2f03a7c59dc24f2e2d8812481ab476b99af8a8e673eb9cfa56": {
-      "address": "0xd3Ae24D50AFBf2Df8166127cd7de06d6529A995f",
-      "txHash": "0x50819892a5bbdce95a1a1e676f58deefaf388b6bff14623d479527ed3f2b5bee",
+      "address": "0x9937cD1126d27c8CD4021227c07659a3b4F31329",
+      "txHash": "0xbdb17b711fd5725a5241236d58b3cc489fb334c3e08d1adb4bd44c13d0c977f8",
       "layout": {
         "solcVersion": "0.8.20",
         "storage": [
@@ -22,25 +22,25 @@
             "label": "router",
             "offset": 0,
             "slot": "0",
-            "type": "t_contract(IUniswapV2Router)835",
+            "type": "t_contract(IUniswapV2Router)965",
             "contract": "SimpleERC20Swapper",
-            "src": "src\\SimpleERC20Swapper.sol:19"
+            "src": "src\\SimpleERC20Swapper.sol:14"
           },
           {
             "label": "factory",
             "offset": 0,
             "slot": "1",
-            "type": "t_contract(IFactory)801",
+            "type": "t_contract(IFactory)931",
             "contract": "SimpleERC20Swapper",
-            "src": "src\\SimpleERC20Swapper.sol:20"
+            "src": "src\\SimpleERC20Swapper.sol:15"
           }
         ],
         "types": {
-          "t_contract(IFactory)801": {
+          "t_contract(IFactory)931": {
             "label": "contract IFactory",
             "numberOfBytes": "20"
           },
-          "t_contract(IUniswapV2Router)835": {
+          "t_contract(IUniswapV2Router)965": {
             "label": "contract IUniswapV2Router",
             "numberOfBytes": "20"
           },

@@ -45,16 +45,24 @@ The contract adheres to standard ERC-20 interfaces, ensuring compatibility with 
 The contract's upgradeability features allow for future enhancements or modifications, ensuring continued interoperability with evolving smart contract ecosystems.
 
 ## Readability and code quality
-The code is simple, easy to read and follows modular smart contract architecture. 
+
+The code is simple, easy to read and follows modular smart contract architecture.
 The environment used for writing the code is foundry. The environment for writing the test for the code is foundry and it can be tested with forge test. (Your RPC URL must be set for the test to run)
 The deployment and verification of the code was done using hardhat in the foundry environment as foundry makes it possible to do so.
 This smart contract can be deployed to any EVM based network.
 
 ## Sepolia Deployment Details
 
+The smart contract was deployed to sepolia testnet.
+
+```shell
+$ SimpleERC20Swapper address: 0x0BE7B98d8F587f86F21d5D88886635a8A28CD5c7
+```
+
 ```shell
 $ sepolia testnet UniswapV2 factory address: 0xc9f18c25Cfca2975d6eD18Fc63962EBd1083e978
 ```
+
 ```shell
 $ sepolia testnet UniswapV2 Router address: 0x86dcd3293C53Cf8EFd7303B57beb2a3F671dDE98
 ```
@@ -63,75 +71,5 @@ $ sepolia testnet UniswapV2 Router address: 0x86dcd3293C53Cf8EFd7303B57beb2a3F67
 $ sepolia testnet WETH address: 0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9
 ```
 
-```shell
-$ sepolia testnet erc20 token: 0xCEED28A1070345Be34F9dcE095E86Ef087df49f8
-```
 
-
-## Foundry
-
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
 # Simple-ERC20-swapper

@@ -70,7 +70,7 @@ contract SimpleERC20SwapperTest is Test {
         uint256 ownerBalanceBefore = IERC20(usdc).balanceOf(owner);
         console2.log("Owner balance before swap: ", ownerBalanceBefore);
 
-        // get owner
+        // // get owner
         address getOwner = simpleERC20Swapper.owner();
         console2.log("get owner: ", getOwner);
 
